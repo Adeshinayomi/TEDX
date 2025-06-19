@@ -1,0 +1,315 @@
+.hero{
+  width: 80%;
+  margin: auto;
+  padding: 40px 0;
+  height: 120vh;
+}
+.hero .background{
+  width: 100%;
+  height: 40vh;
+  background-color: var(--accent-color);
+  border-radius: var(--border-raduis);
+}
+.hero .hero-image{
+  position:relative;
+  width: 70%;
+  height: 100vh;
+  margin: auto;
+}
+.hero-image img{
+  position: absolute;
+  bottom: 200px;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--border-raduis);
+}
+.about{
+  width: 100%;
+  padding: 20px;
+}
+.about-text{
+  width: 100%;
+  display: grid;
+  gap: 1rem;
+}
+.about-text span{
+  font-weight: var(--meduim);
+}
+.about-text p{
+  width: 50%;
+}
+.event-details{
+  width:100%;
+  padding: 20px;
+  display: grid;
+  grid-template-columns:repeat(2,1fr);
+  gap: 1rem;
+}
+.event-details .location{
+  width:100%;
+  padding: 20px 0;
+  display: grid;
+  gap: 1rem;
+}
+.location .date{
+  width:100%;
+  display: flex;
+  gap: 1rem;
+  align-items:center;
+}
+.location .date img{
+  width:5%;
+  height: 5vh;
+}
+.location .venue{
+  width:100%;
+  display: flex;
+  gap: 1rem;
+  align-items:center;
+}
+.location .venue img{
+  width:5%;
+  height: 5vh;
+}
+.ticket-price{
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.ticket-card{
+  width: 100%;
+  height: 20vh;
+  padding:0 20px;
+  background-color: var(--background-color);
+  border-radius: var(--border-raduis);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.ticket-card .ticket-fee{
+  display: grid;
+  gap: 1rem;
+}
+.ticket-fee .amount{
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.ticket-card .card-btns{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.card-btns button{
+  padding:10px 20px;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+.card-btns button img{
+  width: 30px;
+  height: 5vh;
+}
+.ticket-price .pay-btn{
+  width: 50%;
+  margin: auto;
+  padding:20px 40px;
+}
+.ticket-price .pay-btn a{
+  color: var(--background-color);
+}
+.faqs{
+  width:90%;
+  padding:20px 0;
+  margin:100px auto;
+  display: grid;
+  gap: 2rem;
+}
+.faq-header h1{
+  text-align: center;
+}
+.question-cont{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 2rem;
+}
+.question-card{
+  width: 100%;
+  padding:25px 10px;
+  background-color: var(--background-color);
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-raduis);
+}
+.question-card .question-header{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.question-header h4{
+  font-size: var(--meduim-text);
+}
+.question-header .dropdown-btn{
+  width: 20%;
+  border: none;
+  display: flex;
+  justify-content: center;
+  background-color: var(--background-color);
+}
+.question-header .dropdown-btn img{
+  width: 40%;
+  height: 5vh;
+}
+footer{
+  width: 100%;
+  padding: 20px 0;
+  margin-top:50px ;
+  background-color: var(--background-color);
+  display: grid;
+  justify-content: center;
+  gap: 1rem;
+}
+.footer-text{
+  display: grid;
+  gap: 1rem;
+}
+.footer-text .icons{
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+.footer-text .icons .icon img{
+  width: 40px;
+  height: 40px;
+}
+footer .contact-info{
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.contact-info span{
+  font-weight: var(--meduim);
+}
+.contact-info address{
+  font-weight: var(--meduim);
+}
+footer .legal-info{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+}
+footer .legal-info span img{
+  width: 20px;
+  height: 20px;
+}
+
+@media (min-width:300px) and (max-width:500px) {
+  .hero{
+    width: 100%;
+    padding:0;
+    height: 90vh;
+  }
+  .hero .background{
+    display: none;
+  }
+  .hero .hero-image{
+    width: 100%;
+    height: 80vh;
+  }
+  .hero-image img{
+    bottom:0;
+    border-radius:0;
+  } 
+  .about-text p{
+    width: 100%;
+  }
+  .event-details{
+    width:100%;
+    padding:20px;
+    display: grid;
+    grid-template-columns:repeat(1,1fr);
+    gap:0;
+  }
+  .location .date img{
+    width:30px;
+    height:30px;
+  }
+  .location .venue img{
+    width:30px;
+    height:30px;
+  }
+  .ticket-price{
+    padding:0;
+  }
+  .ticket-card{
+    height: 15vh;
+    padding:0 20px;
+  }
+  .ticket-fee .amount h4{
+    font-size: var(--paragraph-text);
+    font-weight: var(--bold);
+  }
+  .card-btns button{
+    padding:10px 0;
+    background-color: var(--background-color);
+  }
+  .card-btns button img{
+    width: 20px;
+    height: 20px;
+  }
+  .ticket-price .pay-btn{
+    width: 70%;
+    margin: auto;
+    padding:20px 40px;
+  }
+  .ticket-price .pay-btn a{
+    color: var(--background-color);
+    font-size: var(--paragraph-text);
+    font-weight: var(--bold);
+  }
+  .faqs{
+    width:95%;
+    padding:20px 0;
+    margin:100px auto;
+    display: grid;
+    gap: 2rem;
+  }
+  .faq-header h1{
+    text-align: center;
+    font-size: var(--subheading-text);
+  }
+  .question-cont{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    gap: 2rem;
+  }
+  .question-header h4{
+    font-size: var(--paragraph-text);
+  }
+  .question-header .dropdown-btn img{
+    width: 20px;
+    height:20px;
+  }
+  .footer-text{
+    display: grid;
+    gap: 1rem;
+  }
+  .footer-text h1{
+    font-size:var(--meduim-text);
+    text-align: center;
+  }
+  .footer-text .icons .icon img{
+    width: 20px;
+    height: 20px;
+  }
+  footer .contact-info{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+}
