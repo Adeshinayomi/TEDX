@@ -17,18 +17,18 @@
     <div class="logo">
       <img src="images/light-logo.jpg" alt="">
     </div>
-    <nav>
+    <nav class="nav">
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#faq">FAQ's</a></li>
+        <li class="link-btn"><a href="#">Home</a></li>
+        <li class="link-btn"><a href="#about">About</a></li>
+        <li class="link-btn"><a href="#faq">FAQ's</a></li>
       </ul>
     </nav>
     <div class="cta-btn">
       <button class="primary-btn">Get Tickets</button>
     </div>
     <div class="menu-bar">
-      <img src="images/icons/menu.png" alt="">
+      <img class="bar toggle-btn" src="images/icons/menu.png" alt="">
     </div>
   </header>
   <section class="hero">
@@ -78,9 +78,9 @@
           </div>
         </div>
         <div class="card-btns">
-          <button class="decrease-btn primary-btn"> <img class="icon-img" src="images/icons/minus.png" alt=""> </button>
-          <span class="quantity">0</span>
-          <button class="increase-btn primary-btn"> <img class="icon-img" src="images/icons/add.png" alt=""> </button>
+          <button class="decrease-btn primary-btn" data-type="early"> <img class="icon-img" src="images/icons/minus.png" alt=""> </button>
+          <span class="quantity ticket-quantity-early">0</span>
+          <button class="increase-btn primary-btn" data-type="early"><img class="icon-img" src="images/icons/add.png" alt=""> </button>
         </div>
       </div>
       <div class="ticket-card">
@@ -92,9 +92,9 @@
           </div>
         </div>
         <div class="card-btns">
-          <button class="decrease-btn primary-btn"> <img class="icon-img" src="images/icons/minus.png" alt=""> </button>
-          <span class="quantity">0</span>
-          <button class="increase-btn primary-btn"> <img class="icon-img" src="images/icons/add.png" alt=""> </button>
+          <button class="decrease-btn primary-btn" data-type="regular"> <img class="icon-img" src="images/icons/minus.png" alt=""> </button>
+          <span class="quantity ticket-quantity-regular">0</span>
+          <button class="increase-btn primary-btn" data-type="regular"> <img class="icon-img" src="images/icons/add.png" alt=""> </button>
         </div>
       </div>
       <button class="primary-btn pay-btn"><a href="checkout.html">Get Tickets</a></button>
@@ -108,37 +108,49 @@
       <div class="question-card">
         <div class="question-header">
          <h4>What is TEDX?</h4>
-         <button class="dropdown-btn"> <img class="icon-img" src="images/icons/down.png" alt=""> </button>
+         <button class="dropdown-btn" data-number="first"> <img class="icon-img" src="images/icons/down.png" alt=""> </button>
         </div>
-        <div class="ques">
-          <p></p>
+        <div class="ques first-q">
+          <hr>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, facilis a obcaecati totam asperiores similique cum dolore doloribus molestias quisquam iste nisi excepturi reprehenderit dicta nemo! Culpa natus voluptate tempora!
+          </p>
         </div>
       </div>
       <div class="question-card">
         <div class="question-header">
          <h4>How Can I Get The Tickets?</h4>
-         <button class="dropdown-btn"> <img class="icon-img" src="images/icons/down.png" alt=""> </button>
+         <button class="dropdown-btn" data-number="second"><img class="icon-img" src="images/icons/down.png" alt=""> </button>
         </div>
-        <div class="ques">
-          <p></p>
+        <div class="ques second-q">
+          <hr>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, facilis a obcaecati totam asperiores similique cum dolore doloribus molestias quisquam iste nisi excepturi reprehenderit dicta nemo! Culpa natus voluptate tempora!
+          </p>
         </div>
       </div>
       <div class="question-card">
         <div class="question-header">
          <h4>How Do I Get To The Venue</h4>
-         <button class="dropdown-btn"> <img class="icon-img" src="images/icons/down.png" alt=""> </button>
+         <button class="dropdown-btn" data-number="third"><img class="icon-img" src="images/icons/down.png" alt=""> </button>
         </div>
-        <div class="ques">
-          <p></p>
+        <div class="ques third-q">
+          <hr>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, facilis a obcaecati totam asperiores similique cum dolore doloribus molestias quisquam iste nisi excepturi reprehenderit dicta nemo! Culpa natus voluptate tempora!
+          </p>
         </div>
       </div>
       <div class="question-card">
         <div class="question-header">
          <h4>Is TEDX Worth My Time</h4>
-         <button class="dropdown-btn"> <img class="icon-img" src="images/icons/down.png" alt=""> </button>
+         <button class="dropdown-btn" data-number="last"> <img class="icon-img" src="images/icons/down.png" alt=""> </button>
         </div>
-        <div class="ques">
-          <p></p>
+        <div class="ques last-q">
+          <hr>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, facilis a obcaecati totam asperiores similique cum dolore doloribus molestias quisquam iste nisi excepturi reprehenderit dicta nemo! Culpa natus voluptate tempora!
+          </p>
         </div>
       </div>
     </div>
@@ -160,5 +172,7 @@
       <span class="copyright-icon"> <img class="icon-img" src="images/icons/copyright.png" alt=""></span>Copyright All Rights Reserved. TEDX 2025
     </p>
   </footer>
+
+  <script src="script/script.js"></script>
 </body>
 </html>    

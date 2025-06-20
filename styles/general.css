@@ -117,31 +117,51 @@ header .logo img{
 header nav{
   display: none;
 }
+header .show-ul{
+ position:fixed;
+ top: 0;
+ right: 0;
+ width: 100%;
+ padding:40px 20px;
+ height: 100vh;
+ background-color: var(--background-color);
+ z-index: 1;
+ display: block;
+}
 header nav ul{
   width: 100%;
   display: flex;
-  gap: 1.5rem;
+  flex-direction: column;
+  gap: 3rem;
   justify-content: center;
-  align-items: center;
+  align-items: start;
 }
 header nav ul li a{
   color: var(--primary-color);
   font-weight: var(--meduim);
 }
 header .cta-btn{
+  position:fixed;
+  bottom: 0;
+  right: 0;
   width: 100%;
+  padding: 20px;
   margin: auto;
   display: flex;
-  justify-content: end;
-  display: none;
+  justify-content:center;
+  background-color: var(--background-color);
+   z-index: 2;
 }
 header .cta-btn button{
+  padding: 20px 40px;
   font-size: var(--paragraph-text);
+ 
 }
 header .menu-bar{
   width: 100%;
   display:flex;
   justify-content: end;
+  z-index: 3;
 }
 header .menu-bar img{
   width: 50px;
