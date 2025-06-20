@@ -40,6 +40,9 @@ p,span,a{
   font-size: var(--paragraph-text);
   color: var(--primary-color);
 }
+img{
+  cursor: pointer;
+}
 .icon-img{
   width: 100px;
   height: 10vh;
@@ -53,6 +56,8 @@ p,span,a{
   padding: 10px 40px;
 }
 header{
+  position: fixed;
+  z-index: 4;
   width: 100%;
   padding:20px;
   border-bottom:1px solid var(--secondary-color) ;
@@ -89,6 +94,10 @@ header .cta-btn{
 }
 header .cta-btn button{
   font-size: var(--paragraph-text);
+  padding: 20px 40px;
+}
+header .cta-btn a{
+  color: var(--background-color);
 }
 header .menu-bar{
   display: none;
@@ -125,7 +134,7 @@ header .show-ul{
  padding:40px 20px;
  height: 100vh;
  background-color: var(--background-color);
- z-index: 1;
+ z-index:2;
  display: block;
 }
 header nav ul{
@@ -150,12 +159,11 @@ header .cta-btn{
   display: flex;
   justify-content:center;
   background-color: var(--background-color);
-   z-index: 2;
+  z-index: 1;
 }
 header .cta-btn button{
   padding: 20px 40px;
   font-size: var(--paragraph-text);
- 
 }
 header .menu-bar{
   width: 100%;
@@ -166,5 +174,18 @@ header .menu-bar{
 header .menu-bar img{
   width: 50px;
   height: 50px;
+}
+header .menu-bar .close{
+  position: absolute;
+  opacity: 0;
+}
+header .menu-bar .bar{
+  opacity: 1;
+}
+header .menu-bar .bar.visible{
+  opacity: 0;
+}
+header .menu-bar .close.visible{
+  opacity: 1;
 }
 }

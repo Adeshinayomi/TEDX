@@ -31,4 +31,7 @@ document.querySelectorAll('.link-btn').forEach((btn)=>{
 })
 document.querySelector('.menu-bar').addEventListener('click',()=>{
     document.querySelector('.nav').classList.toggle('show-ul');
+    document.querySelectorAll('.toggle-btn').forEach((btn)=>{
+      btn.classList.toggle('visible')
+    })
 })
