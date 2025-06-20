@@ -52,26 +52,19 @@
       <h1>Order Summary</h1>
       <div class="order-summary js-order-summary">
         <div class="ticket-number">
-          <div class="amount summary">
-          <h4>1x Regular</h4>
-          <div>
-            <img src="images/icons/nigeria-naira-currency-symbol.png" alt="">
-            <span>4,000.00</span>
-          </div>
-        </div>
         </div>
         <div class="service-fee summary">
           <h4>Service Fee</h4>
           <div>
             <img src="images/icons/nigeria-naira-currency-symbol.png" alt="">
-            <span>160.00</span>
+            <span class="js-service-fee"></span>
           </div>
         </div>
         <div class="sub-total summary"> 
           <h4>sub-total</h4>
           <div>
             <img src="images/icons/nigeria-naira-currency-symbol.png" alt="">
-            <span>4,160.00</span>
+            <span class="js-sub-total"></span>
           </div>
         </div>
         <hr>
@@ -79,12 +72,14 @@
         <h4>Total</h4>
         <div>
           <img src="images/icons/nigeria-naira-currency-symbol.png" alt="">
-          <span>4,160.00</span>
+          <span class="js-total"></span>
         </div>
       </div>
       </div>
       <button class="checkout-btn primary-btn">Checkout</button>
     </div>
   </section>
+
+  <script type="module" src="script/chekout.js"></script>
 </body>
 </html>
