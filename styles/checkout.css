@@ -61,6 +61,10 @@ header{
   display: grid;
   gap: 2rem;
 }
+.ticket-number,.order-summary{
+  display: grid;
+  gap: 2rem;
+}
 .checkout h1{
   text-align: center;
   font-size: var(--header-text);
@@ -72,6 +76,15 @@ header{
   grid-template-columns: repeat(2,1fr);
   gap: 2rem;
   justify-content: space-between;
+}
+.checkout .summary img{
+  width: 18px;
+  width: 18px;
+}
+.checkout .summary div{
+  display: flex;
+  justify-content: end;
+  align-items: center;
 }
 .checkout .summary span{
   display: flex;

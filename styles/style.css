@@ -95,8 +95,16 @@
 }
 .ticket-fee .amount{
   display: flex;
-  gap: 1rem;
+  gap: .2rem;
   align-items: center;
+}
+.ticket-fee .amount div{
+  display: flex;
+  align-items: center;
+}
+.ticket-fee .amount img{
+  width:20px;
+  height:20px;
 }
 .ticket-card .card-btns{
   display: flex;
@@ -272,6 +280,10 @@ footer .legal-info span img{
   .ticket-fee .amount h4{
     font-size: var(--paragraph-text);
     font-weight: var(--bold);
+  }
+  .ticket-fee .amount img{
+    width:15px;
+    height:15px;
   }
   .card-btns button{
     padding:10px 0;
