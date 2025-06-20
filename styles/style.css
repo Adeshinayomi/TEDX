@@ -328,10 +328,15 @@ footer .legal-info span img{
     height: 20px;
   }
   footer .contact-info{
+    width:80%;
+    margin:auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 1rem;
+  }
+  .contact-info address{
+    text-align:center;
   }
 }
