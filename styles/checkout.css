@@ -66,3 +66,27 @@
   justify-content: center;
   align-items: center;
 }
+@media (min-width:300px) and (max-width:500px){
+  h1{
+    font-size: var(--subheading-text);
+  }
+  .checkout .summary h4{
+    font-size: var(--paragraph-text);
+  }
+  .checkout h1{
+    font-size: var(--subheading-text);
+  }
+  .form{
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .form form{
+    grid-template-columns: repeat(1,1fr);
+  }
+  .form .form-cont{
+    width:95%;
+  }
+  .checkout{
+    width: 95%;
+  }
+}
