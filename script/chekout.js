@@ -29,18 +29,19 @@ document.querySelector('.back').addEventListener('click',()=>{
 })
 
 document.querySelector('.checkout-btn').addEventListener('click',()=>{
-  const form=document.getElementById('checkout')
-  if(!form.checkValidity){
-    form.reportValidity
-    return;
-  }else{
-    form.requestSubmit()
-    const email=document.querySelector('.email').value
-    const firstName=document.querySelector('.first-name').value
-    const lastName=document.querySelector('.last-name').value
-    const phone=document.querySelector('.phone').value
-    const name= firstName + " " + lastName
+  const email=document.querySelector('.email').value
+  const confirmEmail=document.querySelector('.confirm-email').value
+  const firstName=document.querySelector('.first-name').value
+  const lastName=document.querySelector('.last-name').value
+  const phone=document.querySelector('.phone').value
+  const name= firstName + " " + lastName
 
+  if(email === ""|| firstName === "" || lastName === "" || phone === "" ){
+    alert('fill out all the fields')
+    return;
+  }else if(email !== confirmEmail){
+    alert("emails does not match")
+  }else{
     let handler = PaystackPop.setup({
         key: 'pk_test_1651a6297488fa17657f72c6a3d0e8f2e3b273b5', // your public key
         email: email,
@@ -70,7 +71,5 @@ document.querySelector('.checkout-btn').addEventListener('click',()=>{
     });
       handler.openIframe()
     }
-  
-   localStorage.removeItem('ticket')
 })
 
