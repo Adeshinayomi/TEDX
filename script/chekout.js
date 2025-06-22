@@ -1,6 +1,7 @@
 import { ticketToBuy,tickets } from "../data/TicketType.js";
-let total=0;
-tickets.forEach((ticket) => {
+ let total=0;
+
+  tickets.forEach((ticket) => {
   ticketToBuy.forEach((item)=>{
     if(ticket.type === item.type){
       document.querySelector('.ticket-number').innerHTML+=
@@ -22,3 +23,54 @@ tickets.forEach((ticket) => {
     }
   })
 });
+
+document.querySelector('.back').addEventListener('click',()=>{
+  localStorage.removeItem('ticket')
+})
+
+document.querySelector('.checkout-btn').addEventListener('click',()=>{
+  const form=document.getElementById('checkout')
+  if(!form.checkValidity){
+    form.reportValidity
+    return;
+  }else{
+    form.requestSubmit()
+    const email=document.querySelector('.email').value
+    const firstName=document.querySelector('.first-name').value
+    const lastName=document.querySelector('.last-name').value
+    const phone=document.querySelector('.phone').value
+    const name= firstName + " " + lastName
+
+    let handler = PaystackPop.setup({
+        key: 'pk_test_1651a6297488fa17657f72c6a3d0e8f2e3b273b5', // your public key
+        email: email,
+        amount:total*100,
+        currency: "NGN",
+        ref: "TICKET_" + Math.floor(Math.random() * 1000000000),
+        metadata: {
+          custom_fields: [
+            {
+              display_name: "Full Name",
+              variable_name: "full_name",
+              value: name
+            },
+            {
+              display_name: "Phone Number",
+              variable_name: "phone_number",
+              value: phone
+            }
+          ]
+        },
+        callback: function(response) {
+          alert("✅Payment Successful!");
+        },
+        onClose: function() {
+          alert("❌ Payment window closed.");
+        }
+    });
+      handler.openIframe()
+    }
+  
+   localStorage.removeItem('ticket')
+})
+

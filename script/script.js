@@ -1,9 +1,13 @@
 import { ticketToBuy } from "../data/TicketType.js"
+
 const increaseBtn=document.querySelectorAll('.increase-btn')
 const dereaseBtn=document.querySelectorAll('.decrease-btn')
 const dropdownBtn=document.querySelectorAll('.dropdown-btn')
 
-localStorage.removeItem('ticket',JSON.stringify(ticketToBuy))
+window.addEventListener('DOMContentLoaded',()=>{
+  localStorage.removeItem('ticket')
+})
+
 document.querySelector('.pay-btn').addEventListener('click',()=>{
   document.querySelectorAll('.quantity').forEach((quantity)=>{
     const quantityNumber=Number(quantity.innerHTML)
@@ -15,25 +19,31 @@ document.querySelector('.pay-btn').addEventListener('click',()=>{
       })
     }
   })
-  localStorage.setItem('ticket',JSON.stringify(ticketToBuy))
-  window.location='checkout.html'
+  if(ticketToBuy.length>0){
+    localStorage.setItem('ticket',JSON.stringify(ticketToBuy))
+    window.location='checkout.html'
+  }else{
+    alert('Please select a ticket');  
+    return
+  }
+
 })
 
 increaseBtn.forEach((btn)=>{
-    const ticketType=btn.dataset.type
-    btn.addEventListener('click',()=>{
-      document.querySelector(`.ticket-quantity-${ticketType}`).innerHTML++
-    })
+  const ticketType=btn.dataset.type
+  btn.addEventListener('click',()=>{
+    document.querySelector(`.ticket-quantity-${ticketType}`).innerHTML++
+  })
 })
 
-  dereaseBtn.forEach((btn)=>{
-    const ticketType=btn.dataset.type
-    btn.addEventListener('click',()=>{
-      if(document.querySelector(`.ticket-quantity-${ticketType}`).innerHTML > 0){
-        document.querySelector(`.ticket-quantity-${ticketType}`).innerHTML--
-      }  
-    })
+dereaseBtn.forEach((btn)=>{
+  const ticketType=btn.dataset.type
+  btn.addEventListener('click',()=>{
+    if(document.querySelector(`.ticket-quantity-${ticketType}`).innerHTML > 0){
+      document.querySelector(`.ticket-quantity-${ticketType}`).innerHTML--
+    }  
   })
+})
 
 dropdownBtn.forEach((btn)=>{
   const questionNumber=btn.dataset.number
@@ -52,3 +62,10 @@ document.querySelector('.menu-bar').addEventListener('click',()=>{
       btn.classList.toggle('visible')
     })
 })
+
+// window.addEventListener('pageshow',(event)=>{
+//   if(event.persisted||performance.getEntriesByType('navigation')[0].type === 'back_forward'){
+//     console.log('back')
+//     localStorage.removeItem('ticket')
+//   }
+// })
